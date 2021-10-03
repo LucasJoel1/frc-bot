@@ -35,7 +35,7 @@ The FRC2056 Discord Bot is a discord bot that is being made for the [FRC2056](ht
 4. In the bots **cogs** directory create a file called **keys.json**
 5. In keys.json in your **cogs** directory put your [TBA](https://thebluealliance.com)(The Blue Alliance) API key in your json with the name **tbaKey**
 
-**You need to install the requests and discordpy packages.  You can install these packages using pip install ```discord.py``` and ```pip install requests```**
+**You need to install the requests and discordpy packages.  You can install these packages using ```pip install discord.py``` and ```pip install requests```**
 **After completing these steps run the [app.py](./app.py) file using the Python interpreter(Must be 3.9 or later)**
 
 ## Commands

@@ -58,7 +58,7 @@ The FRC2056 Discord Bot is a discord bot that is being made for the [FRC2056](ht
 
 **If you find an issue or bug with the bot please open a issue and if you are a developer and have a fix for an issue please open a PR and link back to the issue.**
 **If you want to add a feature to the bot please open a PR.  When adding a feature please follow the [pep8](https://www.python.org/dev/peps/pep-0008/) guidlines, it is not required however it is recommended.**
-**As I am a student I work on the bot in my free time so if you want a feature in the bot and you are not a part of a FRC team please add it yourself and open a pr to the main branch.  If you are apart of a FRC team please open a PR and include what FRC team you are apart of, the feature you or your team would like added and why you think this feature would be helpful to your team and other teams as well.**
+**As I am a student I work on the bot in my free time so if you want a feature in the bot and you are not a part of a FRC team please add it yourself and open an issue with the `feature` tag and `frcteam` tag to the main branch.  If you are apart of a FRC team please open a PR and include what FRC team you are apart of, the feature you or your team would like added and why you think this feature would be helpful to your team and other teams as well.**
 
 *btw I wrote this readme at 1 am on saturday night so if it has some spelling mistakes or something is not working please let me know*</br>
 **For direct contact you can email me at <a href = "mailto: lucas@ljoel.tech">lucas@ljoel.tech</a>**

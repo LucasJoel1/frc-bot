@@ -3,9 +3,7 @@ from discord.ext import commands
 import os
 import json
 
-keys = json.load(open("./keys.json", "r"))
-
-client = commands.Bot(command_prefix=keys["prefix"])
+client = commands.Bot("prefix")
 client.remove_command("help")
 
 

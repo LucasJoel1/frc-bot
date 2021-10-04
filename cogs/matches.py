@@ -12,8 +12,8 @@ class Matches(commands.Cog):
 
     @commands.command()
     async def matches(self, ctx, teamKey, eventKey):
-        keys = json.load(open("../keys.json", "r"))
-        url = f"https://www.thebluealliance.com/api/v3/team/{teamKey}/event/{eventKey}/matches/keys?X-TBA-Auth-Key={keys['tbaKey']}"
+        tbaKey = 'tbaKey'
+        url = f"https://www.thebluealliance.com/api/v3/team/{teamKey}/event/{eventKey}/matches/keys?X-TBA-Auth-Key={tbaKey}"
         data = requests.get(url).json()
 
         listToStr = "\n".join([str(elem) for elem in data])

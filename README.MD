@@ -28,12 +28,10 @@ The FRC2056 Discord Bot is a discord bot that is being made for the [FRC2056](ht
 2. Open a new command line with the file path set to the path you want the bot files to be located in
 3. Copy and paste `git clone https://github.com/LucasJoel1/2056Bot.git` into your cmd and hit enter
 
-**You will now need to create the json files for your token, [TBA](https://thebluealliance.com)(The Blue Alliance) API key and prefix.**
-1. In the bots **root** directory you will need to create a json file called **keys.json**
-2. In keys.json in your root directory put your **Bot Token** in your json with the name **clientToken**
-3. In keys.json in your root directory using the name **prefix** insert your desired prefix for the bot
-4. In the bots **cogs** directory create a file called **keys.json**
-5. In keys.json in your **cogs** directory put your [TBA](https://thebluealliance.com)(The Blue Alliance) API key in your json with the name **tbaKey**
+**You will now need to fill in the bot token for your token, [TBA](https://thebluealliance.com)(The Blue Alliance) API key and prefix.**
+1. In [app.py](./app.py) replace `clientToken` with your bots token
+2. In [app.py](./app.py) replace `prefix` with your prefered prefix
+3. In the bots **cogs** directory have the variable `tbaKey` be equal to your api key
 
 **You need to install the requests and discordpy packages.  You can install these packages using ```pip install discord.py``` and ```pip install requests```**
 **After completing these steps run the [app.py](./app.py) file using the Python interpreter(Must be 3.9 or later)**

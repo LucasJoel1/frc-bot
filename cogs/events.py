@@ -14,12 +14,12 @@ class Events(commands.Cog):
     async def events(self, ctx, teamNumber, year=None):
         keys = json.load(open("../keys.json", "r"))
         if year == None or year == "all":
-            url = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}/events/keys?X-TBA-Auth-Key={keys['tbaKey']}"
-            url2 = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}/events/simple?X-TBA-Auth-Key={keys['tbaKey']}"
+            url = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}/events/keys?X-TBA-Auth-Key={tbaKey}"
+            url2 = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}/events/simple?X-TBA-Auth-Key={tbaKey}"
         elif year != None:
-            url = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}/events/{year}/keys?X-TBA-Auth-Key={keys['tbaKey']}"
-            url2 = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}/events/{year}/simple?X-TBA-Auth-Key={keys['tbaKey']}"
-        url3 = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}?X-TBA-Auth-Key={keys['tbaKey']}"
+            url = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}/events/{year}/keys?X-TBA-Auth-Key={tbaKey}"
+            url2 = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}/events/{year}/simple?X-TBA-Auth-Key={tbaKey}"
+        url3 = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}?X-TBA-Auth-Key={tbaKey}"
         data = requests.get(url).json()
         data2 = requests.get(url2).json()
         data3 = requests.get(url3)

@@ -3,17 +3,15 @@ import requests
 from discord.ext import commands
 import json
 
-keys = json.load(open("./keys.json", "r"))
-
-
 class Event(commands.Cog):
     def __init__(self, client):
         self.client = client
 
     @commands.command()
     async def event(self, ctx, eventKey):
+        tbaKey = 'tbaKey'
         keys = json.load(open("../keys.json", "r"))
-        url = f"https://www.thebluealliance.com/api/v3/event/{eventKey}?X-TBA-Auth-Key={keys['tbaKey']}"
+        url = f"https://www.thebluealliance.com/api/v3/event/{eventKey}?X-TBA-Auth-Key={tbaKey}"
         data = requests.get(url).json()
 
         if data["website"] == None:

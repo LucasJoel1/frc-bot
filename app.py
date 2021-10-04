@@ -24,4 +24,4 @@ for filename in os.listdir("./cogs"):
         client.load_extension(f"cogs.{filename[:-3]}")
         print(f"loaded {filename}")
 
-client.run(keys["clientToken"])
+client.run("clientToken")

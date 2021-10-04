@@ -3,17 +3,15 @@ import requests
 from discord.ext import commands
 import json
 
-keys = json.load(open("./keys.json", "r"))
-
-
 class Team(commands.Cog):
     def __init__(self, client):
         self.client = client
 
     @commands.command()
     async def team(self, ctx, teamNumber):
-        url = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}?X-TBA-Auth-Key={keys['tbaKey']}"
-        url2 = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}/awards?X-TBA-Auth-Key={keys['tbaKey']}"
+        tbaKey = 'tbaKey'
+        url = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}?X-TBA-Auth-Key={'tbaKey'}"
+        url2 = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}/awards?X-TBA-Auth-Key={'tbaKey'}"
         data = requests.get(url)
         data2 = requests.get(url2).json()
         chairmans = 0

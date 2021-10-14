@@ -51,6 +51,8 @@ The FRC2056 Discord Bot is a discord bot that is being made for the [FRC2056](ht
     !matches (event key)
 - **team:** shows info about a FRC team
     !team (team number)
+- **robots:** shows the robots an FRC team has created over the years
+    !robots (team number)
 
 ## Contributing
 

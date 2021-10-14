@@ -3,15 +3,16 @@ import requests
 from discord.ext import commands
 import json
 
+
 class Team(commands.Cog):
     def __init__(self, client):
         self.client = client
 
     @commands.command()
     async def team(self, ctx, teamNumber):
-        tbaKey = 'tbaKey'
-        url = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}?X-TBA-Auth-Key={'tbaKey'}"
-        url2 = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}/awards?X-TBA-Auth-Key={'tbaKey'}"
+        tbaKey = 'cfjvDKcUH6G3mRIenvD6MRbHyr6YIOLaSpOd1suWeyMuUVIrIA0OBYLY7PNZSITj'
+        url = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}?X-TBA-Auth-Key={tbaKey}"
+        url2 = f"https://www.thebluealliance.com/api/v3/team/{teamNumber}/awards?X-TBA-Auth-Key={tbaKey}"
         data = requests.get(url)
         data2 = requests.get(url2).json()
         chairmans = 0
@@ -47,10 +48,13 @@ class Team(commands.Cog):
             + woodie_flowers
             + skills_competition_winner
         )
-
+        if data.json()["website"] != None:
+            website=data.json()["website"]
+        else:
+            website = f'https://www.thebluealliance.com/team/{teamNumber}'
         embed = discord.Embed(
             title=data.json()["team_number"],
-            url=data.json()["website"],
+            url=website,
             color=discord.Color.from_rgb(40, 89, 165),
         )
         embed.add_field(
